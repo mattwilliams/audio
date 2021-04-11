@@ -25,7 +25,7 @@ function callAudio(req, res) {
     //var process = spawn('afplay', ['./alrarm.mp3'] )
 
     
-    var process = spawn('omxplayer', ["./alarm.mp3"])
+    var process = spawn('omxplayer', ["./alarm.mp3", "-p", "-o", "local"])
     
     process.stdout.on('data', function(data) {
         res.send(data.toString());
